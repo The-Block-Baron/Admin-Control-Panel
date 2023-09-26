@@ -40,14 +40,16 @@ export const Form = styled.form`
 
 export const Input = styled.input`
   background-color: #131313;
-  font-family: Afogand;
+  font-family: Inter;
+  font-weight: 500;
   border: none;
-  padding: 15px 200px 15px 30px;
+  padding: 20px 15px; 
   margin-bottom: 30px;
   letter-spacing: 2px;
   border-radius: 15px;
   color: white;
-
+  width: 380px;
+  box-sizing: border-box; // Ensure padding and border are included in the element's total width and height
 `;
 
 export const Button = styled.button`
