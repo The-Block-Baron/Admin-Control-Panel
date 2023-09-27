@@ -1,7 +1,7 @@
 // src/components/StyledLanding.jsx
 import styled from "styled-components";
 
-export const LandingContainer = styled.div`
+export const LoginContainer = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -20,31 +20,43 @@ export const Title = styled.h1`
   letter-spacing: 3px;
   text-align: center;
 `;
-export const Paragraph = styled.p`
-  color: #F7F7F7;
-  font-family: Crimson Text;
-  font-size: 24px;
-  letter-spacing: 3px;
-  font-weight: 600;
-  max-width: 1185px;
-  margin-top: 40px;
-  margin-bottom: 100px;
-`;
 
 export const Container = styled.div`
   background-color: #1b1b1b;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-  padding: 60px 70px;
-  padding-bottom: 20px;
+  padding: 40px 70px;
+  margin-top: 100px;
+
+`;
+export const Form = styled.form`
+  background-color: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Input = styled.input`
+  background-color: #131313;
+  font-family: Inter;
+  font-weight: 500;
+  border: none;
+  padding: 20px 15px; 
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  border-radius: 15px;
+  color: white;
+  width: 380px;
+  box-sizing: border-box; // Ensure padding and border are included in the element's total width and height
 `;
 
 export const Button = styled.button`
   font-family: Afogand;
   letter-spacing: 3px;
-  margin-bottom: 50px;
-  padding: 35px 45px;
+  padding: 15px 40px;
+  max-width: 150px;
   font-size: 20px;
   background-color: #151515;
   color: #fff;
@@ -53,7 +65,7 @@ export const Button = styled.button`
   cursor: pointer;
   transition: background-color 0.5s;
   border-radius: 15px;
-
+  margin-top: 30px;
   &:hover {
     background-color: #ffffff;
     color: #151515;
