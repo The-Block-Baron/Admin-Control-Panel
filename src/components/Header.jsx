@@ -4,7 +4,7 @@ import Sidebar from './Sidebar';
 import { useNavigate } from 'react-router-dom';
 
 const HeaderContainer = styled.div`
-  width: ${({ isSidebarOpen }) => (isSidebarOpen ? 'calc(100% - 300px)' : '100%')};
+  width: ${({ $isSidebarOpen }) => ($isSidebarOpen ? 'calc(100% - 300px)' : '100%')};
   font-family: Afogand;
   letter-spacing: 2px;
   height: 60px;
@@ -17,7 +17,7 @@ const HeaderContainer = styled.div`
   box-sizing: border-box;
   position: fixed;
   top: 0;
-  left: ${({ isSidebarOpen }) => (isSidebarOpen ? '300px' : '0')};
+  left: ${({ $isSidebarOpen }) => ($isSidebarOpen ? '300px' : '0')};
   z-index: 1000;
   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
   border-bottom: 4px solid #343434
@@ -35,9 +35,9 @@ const ToggleButton = styled.button`
   div {
     width: 24px;
     height: 24px;
-    border: ${({ isSidebarOpen }) => (isSidebarOpen ? '1px solid #000000' : '1px solid #FFFFFF')};
+    border: ${({ $isSidebarOpen }) => ($isSidebarOpen ? '1px solid #000000' : '1px solid #FFFFFF')};
     border-radius: 12px;
-    background-color: ${({ isSidebarOpen }) => (isSidebarOpen ? '#FFFFFF' : 'transparent')};
+    background-color: ${({ $isSidebarOpen }) => ($isSidebarOpen ? '#FFFFFF' : 'transparent')};
   }
 `;
 
@@ -88,9 +88,9 @@ const Header = () => {
 
   return (
     <>
-      <HeaderContainer isSidebarOpen={isSidebarOpen}>
+      <HeaderContainer $isSidebarOpen={isSidebarOpen}>
         <ToggleandTitle>
-            <ToggleButton onClick={toggleSidebar} isSidebarOpen={isSidebarOpen}>
+            <ToggleButton onClick={toggleSidebar} $isSidebarOpen={isSidebarOpen}>
                 <div></div>
             </ToggleButton>
             <HeaderTitle>The block baron: <span>   Admin Panel Control</span></HeaderTitle>

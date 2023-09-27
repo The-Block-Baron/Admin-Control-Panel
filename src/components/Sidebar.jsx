@@ -5,7 +5,7 @@ import groot from '../assets/Groot.png'
 
 const SidebarContainer = styled.div`
   position: fixed;
-  left: ${props => (props.visible ? '0' : '-300px')};
+  left: ${props => (props.$isVisible ? '0' : '-300px')};
   top: 0;
   height: 100vh;
   width: 300px;
@@ -29,16 +29,13 @@ const NavigationLink = styled(NavLink)`
   font-size: 20px;
   letter-spacing: 2px;
   position: relative;
-  padding-right: 10px; // Add some padding to make room for the curved border
+  padding-right: 10px;
 
-  // Define styles for the active state
   &.active::after {
     content: '';
     position: absolute;
-    top: 0;
     left: 0;
-    bottom: 0;
-    width: 7px;
+    width: 8px;
     background-color: #FFFFFF;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -74,8 +71,8 @@ const EmailText = styled.p`
 
 const Sidebar = ({ email, visible }) => {
   return (
-    <SidebarContainer visible={visible}>
-      <NavigationLink to="/main" activeClassName="active">Dashboard</NavigationLink>
+    <SidebarContainer $isVisible={visible}>
+      <NavigationLink to="/main">Dashboard</NavigationLink>
       <NavigationLink to="/players">Players</NavigationLink>
       <NavigationLink to="/states">States</NavigationLink>
       <NavigationLink to="/actions">Actions</NavigationLink>
