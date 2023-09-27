@@ -28,7 +28,7 @@ const AdminLogin = () => {
           throw new Error(data.message || 'Invalid credentials');
         }
   
-        navigate('/');
+        navigate('/main');
       } catch (error) {
         setError(error.message);
       }
