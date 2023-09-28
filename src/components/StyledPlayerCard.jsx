@@ -4,17 +4,17 @@ export const CardContainer = styled.div`
   border: 3px solid #3E3E3E;
   border-radius: 15px;
   background-color: #121212;
-  padding: 10px;
   margin: 10px;
-  padding: 20px 40px;
-  width: 350px
+  padding: 20px;
+  height: 300px;
 `;
 
 export const Username = styled.h2`
     text-align:center;
     font-family: Afogand;
     letter-spacing: 2px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    font-size: 18px;
 `
 export const Button = styled.button`
   font-family: Afogand;
@@ -41,6 +41,7 @@ export const Details = styled.p`
     letter-spacing: 1px;
     font-size: 16px;
     font-weight: 500;
+    padding-left: 10px;
 `
 
 export const Result = styled.span`
@@ -52,6 +53,5 @@ export const ButtonContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 0px;
 `;

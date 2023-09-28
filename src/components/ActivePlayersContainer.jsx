@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 51%;
+  width: 60%;
   max-width: 1050px;
   padding-left: 20px
 `;

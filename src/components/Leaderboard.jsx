@@ -6,19 +6,20 @@ const LeaderboardContainer = styled.div`
   border-radius: 15px;
   padding: 20px;
   margin: 10px;
-  width: 40%;
+  width: 35%;
   max-width: 730px;
   color: #FFFFFF;
   border: 3px solid white;
   display: flex;
   flex-direction: column;
+  height: 650px;
 `;
 
 const Title = styled.h2`
   text-align: center;
   font-family: 'Afogand', sans-serif;
   letter-spacing: 2px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   font-size: 30px;
 `;
 
@@ -40,13 +41,13 @@ const PlayerListItem = styled.li`
   border-bottom: 1px solid #3E3E3E;
   padding: 30px 10px;
   align-items: center;
-  font-size: 18px;
+  font-size: 15px;
 `;
 
 const HeaderRow = styled.div`
   display: flex;
   font-family: Afogand;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 2px;
   justify-content: space-between;
   font-weight: bold;
@@ -74,7 +75,7 @@ export const Button = styled.button`
   transition: background-color 0.5s;
   border-radius: 15px;
   align-self: center;
-  margin-top: 50px;
+  margin-top:1%;
   &:hover {
     background-color: #ffffff;
     color: #151515;

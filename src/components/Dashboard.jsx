@@ -7,7 +7,7 @@ import Leaderboard from './Leaderboard';
 const Dash = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 140px;
+  margin-top: 80px;
 `
 
 
