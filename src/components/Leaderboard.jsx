@@ -4,15 +4,15 @@ import styled from 'styled-components';
 const LeaderboardContainer = styled.div`
   background-color: #121212;
   border-radius: 15px;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   margin: 10px;
-  width: 35%;
+  width: 400px;
   max-width: 730px;
   color: #FFFFFF;
   border: 3px solid white;
   display: flex;
   flex-direction: column;
-  height: 650px;
+  height: 620px;
 `;
 
 const Title = styled.h2`
@@ -64,9 +64,9 @@ const Column = styled.span`
 export const Button = styled.button`
   font-family: Afogand;
   letter-spacing: 3px;
-  padding: 25px 40px;
+  padding: 15px 40px;
   max-width: 300px;
-  font-size: 20px;
+  font-size: 15px;
   background-color: #151515;
   color: #fff;
   border: 1px solid #a9a9a9;
@@ -75,7 +75,7 @@ export const Button = styled.button`
   transition: background-color 0.5s;
   border-radius: 15px;
   align-self: center;
-  margin-top:1%;
+  margin-top:4%;
   &:hover {
     background-color: #ffffff;
     color: #151515;
