@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PlayerCard from './PlayerCard';
 import styled from 'styled-components';
+import useActivePlayers from '../customHooks/useActivePlayers';
 
 const Container = styled.div`
   display: flex;
@@ -11,33 +12,8 @@ const Container = styled.div`
 `;
 
 const ActivePlayersContainer = () => {
-  const [activePlayers, setActivePlayers] = useState([]);
 
-  useEffect(() => {
-    const fetchActivePlayers = async () => {
-        try {
-          const response = await fetch('http://localhost:3004/api/v1/admin/players/active', {
-            method: 'GET',
-            credentials: 'include', // Include credentials for cross-origin requests
-          });
-      
-          if (!response.ok) {
-            throw new Error('Failed to fetch active players');
-          }
-      
-          const activePlayers = await response.json();
-
-          setActivePlayers(activePlayers)
-
-          // Handle the active players data
-        } catch (error) {
-          console.error('Error fetching active players:', error);
-        }
-      };
-      
-
-    fetchActivePlayers();
-  }, []);
+  const { activePlayers, loading, error } = useActivePlayers();
 
   return (
     <Container>

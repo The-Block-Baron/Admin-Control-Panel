@@ -7,6 +7,9 @@ import Dashboard from './components/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import Header from './components/Header';
 import './App.css';
+import ActionsPage from './components/ActionsPage';
+import StatesPage from './components/StatesPage';
+import StateDetail from './components/StateDetail';
 
 const MainContent = styled.div`
   margin-top: 80px; // Adjust based on the height of your header
@@ -33,6 +36,9 @@ const MainApp = () => {
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/" element={<ProtectedRoute />}>
             <Route path="/main" element={<Dashboard />} />
+            <Route path="/actions" element={<ActionsPage />} />
+            <Route path="/states" element={<StatesPage />} />
+            <Route path="/states/:id" element={<StateDetail />} />
           </Route>
         </Routes>
       </MainContent>
