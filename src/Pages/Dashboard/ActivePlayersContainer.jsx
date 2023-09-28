@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import PlayerCard from './PlayerCard';
+import PlayerCard from '../Actions/PlayerCard';
 import styled from 'styled-components';
-import useActivePlayers from '../customHooks/useActivePlayers';
+import useActivePlayers from '../../customHooks/useActivePlayers';
 
 const Container = styled.div`
   display: flex;

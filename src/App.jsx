@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import LandingPage from './components/LandingPage';
-import AdminLogin from './components/AdminLogin';
-import Dashboard from './components/Dashboard';
+import LandingPage from './Pages/LandingPage/LandingPage';
+import AdminLogin from './Pages/Login/AdminLogin';
+import Dashboard from './Pages/Dashboard/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import './App.css';
-import ActionsPage from './components/ActionsPage';
-import StatesPage from './components/StatesPage';
-import StateDetail from './components/StateDetail';
+import ActionsPage from './Pages/Actions/ActionsPage';
+import StatesPage from './Pages/States/StatesPage';
+import StateDetail from './Pages/States/StateDetail';
 
 const MainContent = styled.div`
   margin-top: 80px; // Adjust based on the height of your header

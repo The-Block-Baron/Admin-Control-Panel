@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-import groot from '../assets/Groot.png'
+import groot from '../../assets/Groot.png'
 import { SidebarContainer, NavigationLink, ProfileContainer, ProfileImage, EmailText } from './StyledSidebar';
 
 const Sidebar = ({ visible }) => {

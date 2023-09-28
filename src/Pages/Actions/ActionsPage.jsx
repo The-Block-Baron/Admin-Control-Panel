@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import useActivePlayers from '../../customHooks/useActivePlayers';
 import ActionCard from './ActionCard';
-import useActivePlayers from '../customHooks/useActivePlayers';
 
 const ActionsContainer = styled.div`
   display: flex;

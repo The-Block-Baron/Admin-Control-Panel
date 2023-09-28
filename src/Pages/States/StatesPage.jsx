@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import StateCard from './StateCard';
-import useStates from '../customHooks/useStates';
+import useStates from '../../customHooks/useStates';
 
 const StatesContainer = styled.div`
   display: flex;
