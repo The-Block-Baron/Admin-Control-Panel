@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-import groot from '../assets/Groot.png'
+import groot from '../../assets/Groot.png'
 import { SidebarContainer, NavigationLink, ProfileContainer, ProfileImage, EmailText } from './StyledSidebar';
 
 const Sidebar = ({ visible }) => {
@@ -31,7 +31,6 @@ const Sidebar = ({ visible }) => {
   return (
     <SidebarContainer $isVisible={visible}>
       <NavigationLink to="/main">Dashboard</NavigationLink>
-      <NavigationLink to="/players">Players</NavigationLink>
       <NavigationLink to="/states">States</NavigationLink>
       <NavigationLink to="/actions">Actions</NavigationLink>
       <ProfileContainer>
