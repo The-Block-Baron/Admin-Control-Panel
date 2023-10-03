@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PlayerCard from '../Actions/PlayerCard';
+import PlayerCard from './PlayerCard';
 import styled from 'styled-components';
 import useActivePlayers from '../../customHooks/useActivePlayers';
 

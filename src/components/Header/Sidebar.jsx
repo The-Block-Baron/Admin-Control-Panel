@@ -31,7 +31,6 @@ const Sidebar = ({ visible }) => {
   return (
     <SidebarContainer $isVisible={visible}>
       <NavigationLink to="/main">Dashboard</NavigationLink>
-      <NavigationLink to="/players">Players</NavigationLink>
       <NavigationLink to="/states">States</NavigationLink>
       <NavigationLink to="/actions">Actions</NavigationLink>
       <ProfileContainer>

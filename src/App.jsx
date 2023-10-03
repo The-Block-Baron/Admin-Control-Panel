@@ -10,6 +10,7 @@ import './App.css';
 import ActionsPage from './Pages/Actions/ActionsPage';
 import StatesPage from './Pages/States/StatesPage';
 import StateDetail from './Pages/States/StateDetail';
+import BuildComp from './Pages/Economic/BuildComp';
 
 const MainContent = styled.div`
   margin-top: 80px; // Adjust based on the height of your header
@@ -39,6 +40,7 @@ const MainApp = () => {
             <Route path="/actions" element={<ActionsPage />} />
             <Route path="/states" element={<StatesPage />} />
             <Route path="/states/:id" element={<StateDetail />} />
+            <Route path="/build" element={<BuildComp />} />
           </Route>
         </Routes>
       </MainContent>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 const ModalBackground = styled.div`
   position: fixed;
@@ -18,19 +19,58 @@ const ModalCard = styled.div`
   padding: 20px;
   border-radius: 15px;
   color: #FFFFFF;
+  padding: 70px;
+  border: 3px solid #3E3E3E;
 `;
 
 const Username = styled.h2`
   text-align: center;
-  // Other styles
+  font-family: afogand;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-top: -40px;
+  margin-bottom: 40px;
 `;
 
 const Detail = styled.p`
-  // Styles for detail text
+  Font-family: Inter;
 `;
 
-const Button = styled.button`
-  // Styles for buttons
+
+const Button = styled(NavLink)` 
+  padding: 10px 20px;
+  font-family: 'Afogand';
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-family: Afogand;
+  letter-spacing: 2px;
+  max-width: 150px;
+  font-size: 20px;
+  background-color: #151515;
+  color: #fff;
+  border: 1px solid #a9a9a9;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  border-radius: 15px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #151515;
+    border: 1px solid #000000;
+  }
+  margin-right: 20px; // Adjust the value as needed
+  &:last-child {
+    margin-right: 0; // Ensure that the last button does not have a right margin
+  }
+`;
+
+const ButtonContainer = styled.div`
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -25px;
 `;
 
 const ActionModal = ({ player, onClose }) => {
@@ -41,9 +81,11 @@ const ActionModal = ({ player, onClose }) => {
         <Detail>Company Income: {player.companyIncome}</Detail>
         <Detail>Total Income: {player.totalIncome}</Detail>
         <Detail>In-Game Tokens: {player.inGameTokens}</Detail>
-        <Button>Build</Button>
-        <Button>Improve</Button>
-        <Button>Delete</Button>
+        <ButtonContainer>
+          <Button to={'/build'}>Build</Button>
+          <Button>Improve</Button>
+          <Button>Delete</Button>
+        </ButtonContainer>
       </ModalCard>
     </ModalBackground>
   );
